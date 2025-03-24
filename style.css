@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #f36805;
+  --secondary-color: #262626;
+  --text-color: #242e30;
+  --text-color-light: #fff;
+  --bg-color-dark: #eeede9;
+  --transition: all 200ms ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a,
+button,
+.menu-icon {
+  cursor: pointer;
+}
+
+a {
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+.d-none {
+  display: none;
+}
+
+.main-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container {
+  margin: 24px auto;
+  max-width: 1000px;
+  padding: 0 32px;
+}
+
+main {
+  margin-top: 32px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: underline;
+  padding-bottom: 12px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gap {
+  gap: 6px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 32px 0 32px;
+}
+
+.logo {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(25%) saturate(4934%)
+    hue-rotate(352deg) brightness(91%) contrast(110%);
+  width: 150px;
+}
+
+.menu-icon {
+  width: 28px;
+}
+
+footer {
+  text-align: center;
+  padding: 32px;
+  background-color: var(--bg-color-dark);
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 568px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: underline;
+    padding-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  footer {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 336px) {
+  h3 {
+    padding-right: 32px;
+  }
+}

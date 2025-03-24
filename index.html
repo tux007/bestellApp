@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestell App</title>
+    <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="./assets/favicon/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="./assets/favicon/android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
+    <link rel="stylesheet" href="./styles/content.css" />
+    <script src="./script.js" defer></script>
+    <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
+  </head>
+  <body class="main-layout" onload="init()">
+    <header>
+      <a href="./index.html">
+        <img
+          class="logo"
+          src="./assets/logo/Bestell App- Logo.svg"
+          alt="Bestell App Logo"
+        />
+      </a>
+      <img
+        class="menu-icon"
+        src="./assets/icons/bars-solid.svg"
+        alt=""
+        srcset=""
+      />
+    </header>
+    <main>
+      <div class="content-wrapper">
+        <section class="content">
+          <div class="hero"></div>
+          <section class="container restaurant-info-container">
+            <h1>Nooch Asian Kitchen</h1>
+            <div class="restaurant-info">
+              <span class="flex-align-center gap">
+                <img
+                  class="icon"
+                  src="./assets/icons/star-solid.svg"
+                  alt="Bewertungen Icon"
+                />
+                4.8 (4000+)
+              </span>
+              <span class="flex-align-center gap">
+                <img
+                  class="icon"
+                  src="./assets/icons/bicycle-solid.svg"
+                  alt="Fahrrad Icon"
+                />5.00 CHF
+              </span>
+            </div>
+          </section>
+
+          <section class="container slider-container">
+            <a
+              id="main-dishes-btn"
+              href="#main-dishes"
+              class="category active-category"
+              onclick="toggleCategory(mainDishesBtn)"
+              >Hauptgerichte</a
+            >
+            <a
+              id="snacks-btn"
+              href="#snacks"
+              class="category"
+              onclick="toggleCategory(snacksBtn)"
+              >Snacks</a
+            >
+            <a
+              id="desserts-btn"
+              href="#desserts"
+              class="category"
+              onclick="toggleCategory(dessertsBtn)"
+              >Desserts</a
+            >
+          </section>
+
+          <section class="container dishes-container">
+            <div id="main-dishes">
+              <h2>Hauptgerichte</h2>
+              <ul class="cards-container" id="main-dishes-container"></ul>
+            </div>
+
+            <div id="snacks">
+              <h2>Snacks</h2>
+              <ul class="cards-container" id="snacks-container"></ul>
+            </div>
+
+            <div id="desserts">
+              <h2>Desserts</h2>
+              <ul class="cards-container" id="desserts-container"></ul>
+            </div>
+          </section>
+
+          <div class="mobile-basket-btn-container">
+            <button
+              class="btn"
+              onclick="openMobileBasket()"
+              id="mobile-basket-btn"
+            >
+              <span>Warenkorb anzeigen</span>
+            </button>
+          </div>
+
+          <div
+            class="mobile-basket-container d-none"
+            id="mobile-basket-container"
+          >
+            <button class="close-btn" onclick="closeMobileBasket()">
+              <img
+                src="./assets/icons/xmark-solid.svg"
+                alt="schliessen Icon"
+                class="close-icon"
+              />
+            </button>
+            <h2 class="basket-title">Warenkorb</h2>
+            <section
+              class="delivery-options"
+              id="delivery-options-mobile"
+            ></section>
+            <section class="basket-content-mobile">
+              <div id="basket-content-mobile"></div>
+              <div id="order-summary-mobile"></div>
+            </section>
+          </div>
+        </section>
+
+        <aside class="basket-container">
+          <div class="basket">
+            <h2 class="basket-title">Warenkorb</h2>
+            <section class="delivery-options" id="delivery-options"></section>
+            <section>
+              <div id="basket-content"></div>
+              <div id="order-summary"></div>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutzerklärung</a>
+      </div>
+      <span>© 2025 BestellApp by Tom Steimann</span>
+    </footer>
+  </body>
+</html>

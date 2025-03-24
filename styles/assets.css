@@ -1,0 +1,98 @@
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  width: 100%;
+  font-size: 18px;
+  font-weight: 800;
+  padding-block: 12px;
+  border-radius: 100px;
+  border: transparent;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #cc5804;
+  color: #eeeeee;
+}
+
+.add-btn {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #dbd9d7;
+  transition: var(--transition);
+}
+
+.add-btn img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(25%) saturate(4934%) hue-rotate(352deg) brightness(91%)
+    contrast(110%);
+}
+
+.add-btn:hover {
+  background-color: var(--bg-color-dark);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(53%) sepia(25%) saturate(4934%) hue-rotate(352deg) brightness(91%)
+    contrast(110%);
+}
+
+.close-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.close-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+}
+
+.category {
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.category:hover {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  padding: 12px 20px;
+  border-radius: 100px;
+}
+
+.active-category,
+.active-category:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 12px 20px;
+  border-radius: 100px;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media (max-width: 568px) {
+  .category,
+  .category:hover,
+  .active-category,
+  .active-category:hover {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 368px) {
+  .btn {
+    font-size: 16px;
+  }
+}
