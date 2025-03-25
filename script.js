@@ -115,14 +115,8 @@ function removeFromBasket(element) {
 }
 
 function calculateOrderSummary() {
-  let sum = 0;
+  const sum = calculateSum();
   const delivery = deliveryOption === "deliver" ? 5.0 : 0;
-
-  basket.forEach((element) => {
-    let itemTotal = element.amount * element.price;
-    sum += itemTotal;
-  });
-
   const total = sum + delivery;
 
   orderSummaryRef.innerHTML = orderSummaryTemplate(
@@ -136,6 +130,10 @@ function calculateOrderSummary() {
     delivery.toFixed(2)
   );
   return total;
+}
+
+function calculateSum() {
+  return basket.reduce((sum, element) => sum + element.amount * element.price, 0);
 }
 
 function decreaseQty(element) {
