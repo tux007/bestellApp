@@ -35,7 +35,6 @@ body {
   font-weight: 400;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  overflow-x: hidden; 
 }
 
 a,
@@ -69,7 +68,7 @@ li {
 
 .container {
   margin: 24px auto;
-  max-width: 1000px;
+  max-width: 100%;
   padding: 0 32px;
 }
 
@@ -171,6 +170,6 @@ footer div {
 
 @media (max-width: 336px) {
   h3 {
-    padding-right: 32px;
+    padding-right: 16px;
   }
 }
