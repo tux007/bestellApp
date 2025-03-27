@@ -119,15 +119,8 @@ function calculateOrderSummary() {
   const delivery = deliveryOption === "deliver" ? 5.0 : 0;
   const total = sum + delivery;
 
-  orderSummaryRef.innerHTML = orderSummaryTemplate(
-    sum.toFixed(2),
-    total.toFixed(2),
-    delivery.toFixed(2)
-  );
-  orderSummaryMobileRef.innerHTML = orderSummaryTemplate(
-    sum.toFixed(2),
-    total.toFixed(2),
-    delivery.toFixed(2)
+  orderSummaryRef.innerHTML = orderSummaryTemplate(sum.toFixed(2), total.toFixed(2), delivery.toFixed(2));
+  orderSummaryMobileRef.innerHTML = orderSummaryTemplate(sum.toFixed(2), total.toFixed(2), delivery.toFixed(2)
   );
   return total;
 }
